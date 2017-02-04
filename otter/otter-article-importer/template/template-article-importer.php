@@ -13,21 +13,9 @@
  */
 
 ?>
-<!-- Include marvel stylesheets -->
-<link rel="stylesheet" href="https://blog.marvelapp.com/wp-content/themes/marvel/style.css" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter" type="text/css">
-
-<body class="single single-post single-format-standard">
-
-  <section class="content-otter-main">
     <div id="overlay">
       <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/otter-insert.gif';?>">
     </div>
-    <header>
-        <h1 class="c-slate fontSize-xxl lineHeight-xxl breakPointM-fontSize-xxxl breakPointM-lineHeight-xxxl breakPointL-fontSize-xxxxl breakPointL-lineHeight-xxxxl fontWeight-5">Content Otter</h1>
-        <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/otty-face.jpg';?>">
-    </header>
-
     <!-- Form to handle the upload - The enctype value here is very important -->
     <section class="user-input">
         <p>Paste Article URL:</p>
@@ -66,8 +54,5 @@
 
       </section>
       <!-- insert content section -->
-
-  </section>
-  <!-- content-otter-main -->
 
 </body>
