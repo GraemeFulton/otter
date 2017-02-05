@@ -28,17 +28,17 @@ Class Otter_Tweet_Importer
         }
 
         public function customRSSFunc(){
-            header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('blog_charset'), true);
-            ?>
-            <?php echo '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-                    xmlns:content="http://purl.org/rss/1.0/modules/content/"
-                    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-                    xmlns:dc="http://purl.org/dc/elements/1.1/"
-                    xmlns:atom="http://www.w3.org/2005/Atom"
-                    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-                    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-                    >'.  include(WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml")?>
-
+header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('blog_charset'), true);?>
+<?php echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';?>
+<rss version="2.0"
+        xmlns:content="http://purl.org/rss/1.0/modules/content/"
+        xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+        xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+        <?php do_action('rss2_ns'); ?>>
+<?php include(WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml")?>
             <?php
         }
 

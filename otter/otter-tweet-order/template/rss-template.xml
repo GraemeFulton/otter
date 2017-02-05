@@ -1,155 +1,146 @@
-<rss version="2.0"
-        xmlns:content="http://purl.org/rss/1.0/modules/content/"
-        xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/"
-        xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-        xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
->
 <channel>
-        <title>Content Otter - Feed</title>
-        <atom:link href="http://localhost/content-otter/wp-admin/admin-ajax.php" rel="self" type="application/rss+xml" />
-        <link>http://localhost:8888/content-otter</link>
-        <description>Just another WordPress site</description>
-        <lastBuildDate>Sun, 22 Jan 2017 17:33:57 +0000</lastBuildDate>
-        <language></language>
-        <sy:updatePeriod>hourly</sy:updatePeriod>
-        <sy:updateFrequency>1</sy:updateFrequency>
-<item>
-                        <title>Motion Design + Typography, 🙌 amazing animated skatepark font by @kskee https://t.co/hu6QRPQ7R7 https://t.co/8PBImu6uZx</title>
+<title>Content Otter - Feed</title>
+<atom:link href="http://localhost/content-otter/wp-admin/admin-ajax.php" rel="self" type="application/rss+xml" />
+<link>http://localhost:8888/content-otter</link>
+<description>Just another WordPress site</description>
+<lastBuildDate>Sun, 22 Jan 2017 17:33:57 +0000</lastBuildDate>
+<language></language>
+<sy:updatePeriod>hourly</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency><item>
+                        <title>"What’s the best #font size for the web?" by SmiUX ☞ https://t.co/OocDYlVzTL #design #ux #typography https://t.co/tJdWKuK7gm</title>
                         <link></link>
-                        <pubDate>Sat Feb 04 21:33:05 +0000 2017</pubDate>
+                        <pubDate>Thu Jan 12 13:31:02 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">827993404520951810</guid>
+                        <guid isPermaLink="false">819537168968384512</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Motion Design + Typography, 🙌 amazing animated skatepark font by @kskee https://t.co/hu6QRPQ7R7 https://t.co/8PBImu6uZx                             ]]>
+                            "What’s the best #font size for the web?" by SmiUX ☞ https://t.co/OocDYlVzTL #design #ux #typography https://t.co/tJdWKuK7gm                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>Awesome @behance project "Daily Renders: Dimensional UI" 👏 https://t.co/gGrU6RuuVu by Fyn Ng https://t.co/mQlPGCzXtD</title>
+                        <title>"Digital Design Thinking" by @sreeraj3d ☞ https://t.co/1dhwscy2GZ #design #ux https://t.co/ccSG2lOq0y</title>
                         <link></link>
-                        <pubDate>Sun Feb 05 03:38:02 +0000 2017</pubDate>
+                        <pubDate>Wed Jan 25 16:12:05 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">828085248487481346</guid>
+                        <guid isPermaLink="false">824288741305020416</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Awesome @behance project "Daily Renders: Dimensional UI" 👏 https://t.co/gGrU6RuuVu by Fyn Ng https://t.co/mQlPGCzXtD                             ]]>
+                            "Digital Design Thinking" by @sreeraj3d ☞ https://t.co/1dhwscy2GZ #design #ux https://t.co/ccSG2lOq0y                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>UX Propaganda: Psychological Techniques to Make Your Product Addictive @toptal https://t.co/zPsMOcibrK https://t.co/reGNB154j2</title>
+                        <title>"Why Mobile Microinteractions Matter" by Joanna Ngai ☞ https://t.co/BFLKq1VlG5 #design #ux https://t.co/y4dIb1Vvhi</title>
                         <link></link>
-                        <pubDate>Thu Jan 26 13:13:01 +0000 2017</pubDate>
+                        <pubDate>Wed Jan 25 13:31:05 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">824606069028777986</guid>
+                        <guid isPermaLink="false">824248226261901312</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            UX Propaganda: Psychological Techniques to Make Your Product Addictive @toptal https://t.co/zPsMOcibrK https://t.co/reGNB154j2                             ]]>
+                            "Why Mobile Microinteractions Matter" by Joanna Ngai ☞ https://t.co/BFLKq1VlG5 #design #ux https://t.co/y4dIb1Vvhi                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>How to use colors in UI Design @acreno_ https://t.co/2fBROJHTzf https://t.co/CVECGS5hou</title>
+                        <title>Useful methods, guides and tools for doing human-centred design   https://t.co/1ZF81AZPoL</title>
                         <link></link>
-                        <pubDate>Sat Jan 28 10:32:02 +0000 2017</pubDate>
+                        <pubDate>Sun Feb 05 00:52:14 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">825290329385480193</guid>
+                        <guid isPermaLink="false">828043523081519104</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            How to use colors in UI Design @acreno_ https://t.co/2fBROJHTzf https://t.co/CVECGS5hou                             ]]>
+                            Useful methods, guides and tools for doing human-centred design   https://t.co/1ZF81AZPoL                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>Learn to Create Accessible Websites with the Principles of Universal Design https://t.co/PQUe8EX4aS https://t.co/80PMNEt8Mw</title>
+                        <title>"Align #SVG Icons to Text and Say Goodbye to Font Icons" by @Elliotdahl ☞ https://t.co/5OgwGnshZc #design #ux https://t.co/R6oFoNebUh</title>
                         <link></link>
-                        <pubDate>Sat Jan 28 23:23:02 +0000 2017</pubDate>
+                        <pubDate>Fri Jan 20 09:54:20 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">825484357729128448</guid>
+                        <guid isPermaLink="false">822381738341056512</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Learn to Create Accessible Websites with the Principles of Universal Design https://t.co/PQUe8EX4aS https://t.co/80PMNEt8Mw                             ]]>
+                            "Align #SVG Icons to Text and Say Goodbye to Font Icons" by @Elliotdahl ☞ https://t.co/5OgwGnshZc #design #ux https://t.co/R6oFoNebUh                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>The Designer’s Guide To Responsive Logos https://t.co/4TWltIECf2 https://t.co/UotfScKHyH</title>
+                        <title>"23 Best Books Every Designer Must Read" by Joanna Ngai ☞ https://t.co/7BVLrRj7CB #design #ux https://t.co/KABbvWd9bk</title>
                         <link></link>
-                        <pubDate>Mon Jan 30 21:33:02 +0000 2017</pubDate>
+                        <pubDate>Thu Jan 19 16:12:02 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">826181452022808578</guid>
+                        <guid isPermaLink="false">822114402375712768</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            The Designer’s Guide To Responsive Logos https://t.co/4TWltIECf2 https://t.co/UotfScKHyH                             ]]>
+                            "23 Best Books Every Designer Must Read" by Joanna Ngai ☞ https://t.co/7BVLrRj7CB #design #ux https://t.co/KABbvWd9bk                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>Motion Design + Typography, 🙌 amazing animated skatepark font by @kskee https://t.co/nNAePz53Rf https://t.co/4zrDMWO2t2</title>
+                        <title>"What makes Sketch a more efficient tool for UI" by @UXalpaca ☞ https://t.co/djaLHWpo0C #design #ux https://t.co/g1Uhh6wWeB</title>
                         <link></link>
-                        <pubDate>Wed Feb 01 13:13:03 +0000 2017</pubDate>
+                        <pubDate>Fri Jan 13 13:31:01 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">826780403470106625</guid>
+                        <guid isPermaLink="false">819899555512807425</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Motion Design + Typography, 🙌 amazing animated skatepark font by @kskee https://t.co/nNAePz53Rf https://t.co/4zrDMWO2t2                             ]]>
+                            "What makes Sketch a more efficient tool for UI" by @UXalpaca ☞ https://t.co/djaLHWpo0C #design #ux https://t.co/g1Uhh6wWeB                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>Awesome @behance project "Daily Renders: Dimensional UI" 👏 https://t.co/U7A4DCe8NC by Fyn Ng https://t.co/hA1qRWC7Ma</title>
+                        <title>"Here’s Your Checklist To Create Exceptional Web Experience" by @rdas121 ☞ https://t.co/vkLOESJvSY #design #ux https://t.co/q689KtGJzB</title>
                         <link></link>
-                        <pubDate>Fri Feb 03 10:32:06 +0000 2017</pubDate>
+                        <pubDate>Thu Jan 19 13:31:06 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">827464673234673664</guid>
+                        <guid isPermaLink="false">822073902314700801</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Awesome @behance project "Daily Renders: Dimensional UI" 👏 https://t.co/U7A4DCe8NC by Fyn Ng https://t.co/hA1qRWC7Ma                             ]]>
+                            "Here’s Your Checklist To Create Exceptional Web Experience" by @rdas121 ☞ https://t.co/vkLOESJvSY #design #ux https://t.co/q689KtGJzB                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>Awesome Onboarding Animations by @CleveroadInc https://t.co/ay8lq5kneH https://t.co/hR9XiHw8CV</title>
+                        <title>"How to Develop Your Unique Artistic Style" by Christine Nishiyama @might_could ☞ https://t.co/im4b6go8Mj #design… https://t.co/2q0xVpqxnT</title>
                         <link></link>
-                        <pubDate>Tue Jan 31 02:59:02 +0000 2017</pubDate>
+                        <pubDate>Sun Jan 29 13:31:02 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">826263492575506432</guid>
+                        <guid isPermaLink="false">825697763895685120</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            Awesome Onboarding Animations by @CleveroadInc https://t.co/ay8lq5kneH https://t.co/hR9XiHw8CV                             ]]>
+                            "How to Develop Your Unique Artistic Style" by Christine Nishiyama @might_could ☞ https://t.co/im4b6go8Mj #design… https://t.co/2q0xVpqxnT                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
                 
 
 <item>
-                        <title>🤔  Why we shouldn't rely on placeholder text 👉  "Placeholders are problematic" by @adambsilver… https://t.co/PkPYI0CRfH</title>
+                        <title>"Should Designers Learn Research?" by Kristina Oliva ☞ https://t.co/Jc6Qtsxa76 #design #ux https://t.co/XtQ0hbYXnY</title>
                         <link></link>
-                        <pubDate>Sun Jan 22 03:38:01 +0000 2017</pubDate>
+                        <pubDate>Mon Jan 30 13:31:01 +0000 2017</pubDate>
                         <dc:creator></dc:creator>
-                        <guid isPermaLink="false">823011813394681856</guid>
+                        <guid isPermaLink="false">826060147344670720</guid>
                         <description>
                              <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
-                            🤔  Why we shouldn't rely on placeholder text 👉  "Placeholders are problematic" by @adambsilver… https://t.co/PkPYI0CRfH                             ]]>
+                            "Should Designers Learn Research?" by Kristina Oliva ☞ https://t.co/Jc6Qtsxa76 #design #ux https://t.co/XtQ0hbYXnY                             ]]>
                         </description>
                         <enclosure url="" length="" type="" />
                         </item>
