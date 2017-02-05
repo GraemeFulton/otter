@@ -1,0 +1,26 @@
+body {
+    margin-bottom: 200px;
+    font-family: 'Raleway', sans-serif;
+}
+.orange{
+    background:#f5f5f5;
+    padding:40px;
+}
+
+.twitter-tweet{
+    margin-bottom:40px!important;
+  }
+  
+  .padding{
+      padding:40px;
+  }
+  
+  #tweets .tweet-box{
+      max-width:70vw;
+      float:left;
+      clear:both;
+  }
+  #tweets{
+      float:left;
+      width:100%;
+  }

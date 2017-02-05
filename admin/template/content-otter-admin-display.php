@@ -17,20 +17,34 @@
 <link rel="stylesheet" href="https://blog.marvelapp.com/wp-content/themes/marvel/style.css" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter" type="text/css">
 
-<body class="single single-post single-format-standard">
+<!-- Create a header in the default WordPress 'wrap' container -->
+<div class="wrap">
+    
+        <h2><span class="dashicons dashicons-palmtree"></span> Content Otter</h2>
+      <?php settings_errors(); ?>
+         
+        <?php
+            if( isset( $_GET[ 'tab' ] ) ) {
+                $active_tab = $_GET[ 'tab' ];
+            } // end if
+        ?>        
+        
+<h2 class="nav-tab-wrapper">
+    <a href="?page=content-otter&tab=content_import" class="nav-tab <?php echo $active_tab == 'content_import' ? 'nav-tab-active' : ''; ?>">Content Import</a>
+    <a href="?page=content-otter&tab=popular_tweets" class="nav-tab <?php echo $active_tab == 'popular_tweets' ? 'nav-tab-active' : ''; ?>">Popular Tweets</a>
+</h2>
+        
+        <?php
+        
+         if( $active_tab == 'content_import' ) {
+                
+             include( WP_PLUGIN_DIR.'/content-otter/otter/otter-article-importer/template/template-article-importer.php');
 
-  <section class="content-otter-main">
-    <header>
-        <h1 class="c-slate fontSize-xxl lineHeight-xxl breakPointM-fontSize-xxxl breakPointM-lineHeight-xxxl breakPointL-fontSize-xxxxl breakPointL-lineHeight-xxxxl fontWeight-5">Content Otter</h1>
-        <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/otty-face.jpg';?>">
-    </header>
+        } else {
+            
+            include( WP_PLUGIN_DIR.'/content-otter/otter/otter-tweet-order/template/template-tweet-order.php');
 
-   <?php 
-   //include article importer template
-   include( WP_PLUGIN_DIR.'/content-otter/otter/otter-article-importer/template/template-article-importer.php');
-   ?>
+        } // end if/else
+        ?>
 
-  </section>
-  <!-- content-otter-main -->
-
-</body>
+</div>
