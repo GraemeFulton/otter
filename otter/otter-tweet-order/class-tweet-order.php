@@ -115,9 +115,9 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
         
         private function updateRSS($tweets){
             //include og data grabber
-            //include(WP_PLUGIN_DIR."/content-otter/otter/common-libs/og-data/og-data.php");
+            include(WP_PLUGIN_DIR."/content-otter/otter/common-libs/og-data/og-data.php");
             //create og_data object
-            //$OG = new OG_Data();
+            $OG = new OG_Data();
             
             
             $file = 'test.xml';  // (Can write to this file)
@@ -133,8 +133,8 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
             $count=0;
             //loop through and create rss
             foreach($tweets as $tweet){
-                if($count<10){
-                //$link = $OG->get_og_data( $tweet['text']);    
+                if($count<2){
+                $link = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );    
                 // Open the file to get existing content
                 ob_start();
                 include $rss_body;

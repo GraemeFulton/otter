@@ -13,15 +13,22 @@ Class OG_Data{
 public function get_og_data($link){
   
             //the first url will be the article link
-            $longURL = get_headers($link, 7);
-            $url = $longURL['Location'];
+            $headers = get_headers($link, true);
+            $link =$headers['Location'];
+            $url = preg_replace('/\?.*/', '', $link);
+            $url = preg_replace('/#.*/', '', $url);            
+            
+            if(is_array($url)){
+              return  $link= $url[0];
+            }
+            else{
+            return  $link= $url;
+            }
            
             //and add the post image using plugin hook from prototypr-og-data
-            return $this->otter_get_open_graph_image($url );
-            
-    
-
+          //  return $this->otter_get_open_graph_image($link );
  }
+ 
  
     //get the image from opengraph
     private function otter_get_open_graph_image($link)
@@ -41,7 +48,7 @@ public function get_og_data($link){
                      $otter['image'] = $value;
                }
                if($key =='url'){
-                     $otter['url'] = $value;
+                     $otter['link'] = $value;
                }
         }
 
