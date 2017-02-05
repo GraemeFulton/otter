@@ -133,8 +133,8 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
             $count=0;
             //loop through and create rss
             foreach($tweets as $tweet){
-                if($count<2){
-                $link = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );    
+                if($count<11){
+                $og = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );    
                 // Open the file to get existing content
                 ob_start();
                 include $rss_body;

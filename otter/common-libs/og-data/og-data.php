@@ -7,7 +7,7 @@ Version: 1.0
 Author: Graeme Fulton
 Author URI: http://gfulton.me.uk
 */
-
+include('libs/OpenGraph.php');
 Class OG_Data{
     //first get the image url to grab the opengraph image data from
 public function get_og_data($link){
@@ -19,14 +19,14 @@ public function get_og_data($link){
             $url = preg_replace('/#.*/', '', $url);            
             
             if(is_array($url)){
-              return  $link= $url[0];
+                $link= $url[0];
             }
             else{
-            return  $link= $url;
+              $link= $url;
             }
            
             //and add the post image using plugin hook from prototypr-og-data
-          //  return $this->otter_get_open_graph_image($link );
+           return $this->otter_get_open_graph_image($link );
  }
  
  
@@ -37,8 +37,8 @@ public function get_og_data($link){
 
        $url = $link;
 
-       include('libs/OpenGraph.php');
-       $graph = OpenGraph::fetch($url);
+
+        $graph = OpenGraph::fetch($url);
         foreach ($graph as $key => $value) {
 
                if($key =='title'){

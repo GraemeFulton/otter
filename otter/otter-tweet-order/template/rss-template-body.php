@@ -1,6 +1,6 @@
 <item>
-    <title><?php echo $tweet['text']?></title>
-    <link><?php echo $link; ?></link>
+    <title><?php echo($url);?><?php echo $tweet['text']?></title>
+    <link><?php echo $tweet['urls'][0]['url']; ?></link>
     <pubDate><?php echo $tweet['created_at']; ?></pubDate>
     <dc:creator><?php the_author(); ?></dc:creator>
     <guid isPermaLink="false"><?php echo $tweet['id']; ?></guid>
