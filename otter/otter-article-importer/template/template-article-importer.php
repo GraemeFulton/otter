@@ -13,9 +13,7 @@
  */
 
 ?>
-  <section class="content-otter-main">
     <header>
-        <h1 class="c-slate fontSize-xxl lineHeight-xxl breakPointM-fontSize-xxxl breakPointM-lineHeight-xxxl breakPointL-fontSize-xxxxl breakPointL-lineHeight-xxxxl fontWeight-5">Content Import</h1>
         <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/otty-face.jpg';?>">
     </header>
     <div id="overlay">
@@ -59,5 +57,3 @@
 
       </section>
       <!-- insert content section -->
-
-  </section>

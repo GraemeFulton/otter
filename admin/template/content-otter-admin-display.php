@@ -13,14 +13,10 @@
  */
 
 ?>
-<!-- Include marvel stylesheets -->
-<link rel="stylesheet" href="https://blog.marvelapp.com/wp-content/themes/marvel/style.css" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter" type="text/css">
-
 <!-- Create a header in the default WordPress 'wrap' container -->
 <div class="wrap">
     
-        <h2><span class="dashicons dashicons-palmtree"></span> Content Otter</h2>
+        <h2><span class="dashicons dashicons-palmtree"></span> Content Otter Suite</h2>
       <?php settings_errors(); ?>
          
         <?php
@@ -30,9 +26,11 @@
         ?>        
         
 <h2 class="nav-tab-wrapper">
-    <a href="?page=content-otter&tab=content_import" class="nav-tab <?php echo $active_tab == 'content_import' ? 'nav-tab-active' : ''; ?>">Content Import</a>
-    <a href="?page=content-otter&tab=popular_tweets" class="nav-tab <?php echo $active_tab == 'popular_tweets' ? 'nav-tab-active' : ''; ?>">Popular Tweets</a>
+    <a href="?page=content-otter&tab=content_import" class="nav-tab <?php echo $active_tab == 'content_import' ? 'nav-tab-active' : ''; ?>">Content Importer</a>
+    <a href="?page=content-otter&tab=popular_tweets" class="nav-tab <?php echo $active_tab == 'popular_tweets' ? 'nav-tab-active' : ''; ?>">Popular Tweet Finder</a>
 </h2>
+        
+  <section class="content-otter-main">
         
         <?php
         
@@ -46,5 +44,6 @@
 
         } // end if/else
         ?>
+  </section>
 
 </div>

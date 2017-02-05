@@ -20,17 +20,15 @@
                <div id="overlay">
       <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/otter.gif';?>">
     </div>
-            <h1>Enter a User's Twitter handle!</h1>
-            <p>Note: As of right now, topTweet only accepts the exact Twitter handle for a specified user.</p>
-            <p>It is not necessary to include the '@' symbol.</p>
-            <hr class="featurette-divider">
+            <h1>Find top tweets</h1>
+            <p>Enter a user's twitter handle (it's not necessary to include the '@' symbol):</p>
 
             <!--  INPUT  -->
                 <div class="form-group">
                     <div class="col-xs-4">
                         <input id="twitter_handle" name="twitter_handle" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
                     </div>
-                    <button  id="get_tweets" class="btn btn-default btn-primary col-xs-4">Submit</button>
+                    <button  id="get_tweets" class="btn btn-default btn-primary col-xs-4">Search Twitter</button>
                 </div>
             
         </section>
