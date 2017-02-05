@@ -23,7 +23,7 @@
                  dataType:'json',
                  success: function(data) {
 
-                        //console.log(data)
+                        console.log(data)
                                  //mess with the dates
                                     var TODAY, YESTERDAY, A_WEEK_OLD; 
                                     TODAY = moment().format("DD-MM-YYYY");

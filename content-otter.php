@@ -36,3 +36,4 @@ if ( ! defined( 'WPINC' ) ) {
 require plugin_dir_path(__FILE__) . 'admin/class-content-otter-admin.php';
 //load the plugin when activated - only load admin side of plugin
 add_action( 'plugins_loaded', array( 'Content_Otter_Admin', 'get_instance' ) );
+//add_action( 'init', array( 'Content_Otter_Admin', 'get_instance' ) );

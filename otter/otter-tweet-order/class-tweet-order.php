@@ -19,7 +19,30 @@ Class Otter_Tweet_Importer
                 
                 //ajax hooks for otter importer
 		add_action('wp_ajax_otter_get_tweets',  array($this, 'get_tweets'));
+                add_action('init', array($this,'customRSS'));
         }
+        
+        public function customRSS(){
+            add_feed('content-otter', array($this,'customRSSFunc'));
+            //Ensure the $wp_rewrite global is loaded
+        }
+
+        public function customRSSFunc(){
+            header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('blog_charset'), true);
+            ?>
+            <?php echo '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+                    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+                    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                    xmlns:atom="http://www.w3.org/2005/Atom"
+                    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+                    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+                    >'.  include(WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml")?>
+
+            <?php
+        }
+
+
           
         public function enqueue_scripts(){
             wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/content-otter-tweet.js', array( 'jquery' ), $this->version, false );
@@ -55,6 +78,9 @@ Class Otter_Tweet_Importer
             
             $ordered_tweets = $this->order_tweets($tweets);
             
+            $this->updateRSS($ordered_tweets);
+            
+            
             echo json_encode($ordered_tweets);
             wp_die();
             
@@ -87,67 +113,43 @@ Class Otter_Tweet_Importer
            return $tweets; 
         }
         
-        /************************************************************
-  *                                                         *
-  *****  LIST OF FUNCTIONS TO ACCESS TWEET INFORMATION  *****
-  *                                                         *
-  ************************************************************/
+        private function updateRSS($tweets){
+            //include og data grabber
+            //include(WP_PLUGIN_DIR."/content-otter/otter/common-libs/og-data/og-data.php");
+            //create og_data object
+            //$OG = new OG_Data();
+            
+            
+            $file = 'test.xml';  // (Can write to this file)
+            $file = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml"; 
+            
+            $rss_header = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-header-template.php"; 
+            $rss_body = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template-body.php"; 
 
-  /**
-    *
-    * Print out Associative Array containing tweets from given user
-    *
-    **/
-   private function tweetArray($tweets) {
-        // Assure Twitter API connection
-        $this->checkError($tweets);
-
-        // Initialize array to hold tweets
-        $newTweets = array();
-
-        // Exclude retweets from being pushed
-        foreach($tweets as $tweet) {
-            array_push($newTweets, $tweet);
-        }
-        // Print out associative array of tweets
-        echo "<pre>";
-        print_r($newTweets);
-        echo "</pre>";
-    }
-
-   /**
-     *
-     * Check if Tweet was liked
-     *
-     **/
-   private function tweetLikes($tweets) {
-        // Assure Twitter API connection
-        $this->checkError($tweets);
-
-        foreach($tweets as $tweet) {
-            if ($tweet["favorite_count"] > 0) {
-                echo 'This tweet was liked ' . $tweet["favorite_count"] . ' time(s)!';
+            // Open the file to get existing content
+            ob_start();
+            include $rss_header;
+            $rss = ob_get_clean();
+            $count=0;
+            //loop through and create rss
+            foreach($tweets as $tweet){
+                if($count<10){
+                //$link = $OG->get_og_data( $tweet['text']);    
+                // Open the file to get existing content
+                ob_start();
+                include $rss_body;
+                $rss.= ob_get_clean();
+                }
+                $count++;
             }
-            else {
-                echo "This tweet was not liked!";
-            }
-            echo "<br />";
+            $rss.='</channel></rss>';
+            // Write the contents back to the file
+            file_put_contents($file, $rss);
+            //update rss by flunsing wp rewrite
+            global $wp_rewrite;
+            //Call flush_rules() as a method of the $wp_rewrite object
+            $wp_rewrite->flush_rules( false );
         }
-    }
-
-    /**
-      *
-      * Check if Tweet is a retweet
-      *
-      **/
-     private function isRetweet($tweet) {
-          if ($tweet['retweeted_status']) {
-              return true;
-          }
-          else {
-              return false;
-          }
-      }
 
 
     /**

@@ -22,7 +22,9 @@
         <?php
             if( isset( $_GET[ 'tab' ] ) ) {
                 $active_tab = $_GET[ 'tab' ];
-            } // end if
+            }else{
+                $active_tab = 'content_import';
+            }
         ?>        
         
 <h2 class="nav-tab-wrapper">

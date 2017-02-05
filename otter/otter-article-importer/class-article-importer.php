@@ -123,7 +123,7 @@ Class Otter_Article_Importer
 			$DOM->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
 			
 			//add marvel classes to the html (comment this out to keep html plain)
-			$DOM = $this->add_marvel_html_classes($DOM);
+			//$DOM = $this->add_marvel_html_classes($DOM);
 			
 			$json_array['content'] = $DOM;
 			return $json_array;
