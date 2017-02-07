@@ -6,11 +6,11 @@
  * and open the template in the editor.
  */
 
-
 Class Otter_Tweet_Importer
 {
      private $plugin_name = 'content-otter-tweet';
     private $version = '1.0';
+    private $Ordered_Tweets = '';
     
 	public function __construct() {
 		// Load style sheet and JavaScript.
@@ -20,6 +20,9 @@ Class Otter_Tweet_Importer
                 //ajax hooks for otter importer
 		add_action('wp_ajax_otter_get_tweets',  array($this, 'get_tweets'));
                 add_action('init', array($this,'customRSS'));
+                //rss feed generator
+		add_action('wp_ajax_otter_update_rss',  array($this, 'updateRSS'));
+                
         }
         
         public function customRSS(){
@@ -77,9 +80,9 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
             
             
             $ordered_tweets = $this->order_tweets($tweets);
-            
-            $this->updateRSS($ordered_tweets);
-            
+            $this->Ordered_Tweets = $ordered_tweets;
+            global $all_tweets;
+            $all_tweets = $ordered_tweets;
             
             echo json_encode($ordered_tweets);
             wp_die();
@@ -113,16 +116,16 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
            return $tweets; 
         }
         
-        private function updateRSS($tweets){
+        public function updateRSS(){
+            $tweets = $_POST['tweets'] ;
+
+//           echo json_encode($tweets);
+//            wp_die();  
             //include og data grabber
             include(WP_PLUGIN_DIR."/content-otter/otter/common-libs/og-data/og-data.php");
             //create og_data object
-            $OG = new OG_Data();
-            
-            
-            $file = 'test.xml';  // (Can write to this file)
-            $file = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml"; 
-            
+            $OG = new OG_Data();            
+            $file = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template.xml";
             $rss_header = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-header-template.php"; 
             $rss_body = WP_PLUGIN_DIR."/content-otter/otter/otter-tweet-order/template/rss-template-body.php"; 
 
@@ -133,8 +136,9 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
             $count=0;
             //loop through and create rss
             foreach($tweets as $tweet){
-                if($count<11){
-                $og = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );    
+                if($count<5){
+               // $og = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );  
+               $url = $OG->get_url($tweet['entities']['urls'][0]['expanded_url'] );  
                 // Open the file to get existing content
                 ob_start();
                 include $rss_body;
@@ -149,6 +153,9 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
             global $wp_rewrite;
             //Call flush_rules() as a method of the $wp_rewrite object
             $wp_rewrite->flush_rules( false );
+                       
+            echo json_encode($tweets);
+            wp_die();
         }
 
 

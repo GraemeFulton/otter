@@ -10,6 +10,23 @@ Author URI: http://gfulton.me.uk
 include('libs/OpenGraph.php');
 Class OG_Data{
     //first get the image url to grab the opengraph image data from
+public function get_url($link){
+             //the first url will be the article link
+            $headers = get_headers($link, true);
+            $link =$headers['Location'];
+            $url = preg_replace('/\?.*/', '', $link);
+            $url = preg_replace('/#.*/', '', $url);            
+            
+            if(is_array($url)){
+                $link= $url[0];
+            }
+            else{
+              $link= $url;
+            }
+            return $link;
+}    
+    
+    
 public function get_og_data($link){
   
             //the first url will be the article link

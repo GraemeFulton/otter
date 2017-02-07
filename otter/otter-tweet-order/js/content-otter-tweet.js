@@ -1,4 +1,4 @@
-   
+   var tweets = [];
 
 (function( $ ) {
 	'use strict';
@@ -22,8 +22,6 @@
                  url: ajaxurl,
                  dataType:'json',
                  success: function(data) {
-
-                        console.log(data)
                                  //mess with the dates
                                     var TODAY, YESTERDAY, A_WEEK_OLD; 
                                     TODAY = moment().format("DD-MM-YYYY");
@@ -39,7 +37,7 @@
 
                                 for (var tweet in data) {
                                     //check date
-                             
+                            
                                     var tweetdate =moment(data[tweet].created_at,'dd MMM DD HH:mm:ss ZZ YYYY', 'en')                                
                            
                                     
@@ -47,6 +45,7 @@
                                     if(tweetdate > A_WEEK_OLD){
                                         if(tweetCount <20){
                                             var count = tweetCount+1
+                                             tweets.push(data[tweet])
                                             //create tweet container moment().startOf('day').fromNow();        // 12 hours ago
                                              $('#tweets').append('<div class="tweet-box" id="tweet-box-'+count+'"><h1>#'+count+' Tweeted '+moment(data[tweet].created_at).startOf('day').fromNow()+'</h1><h2><span style="color:#888"> 🔁 '+data[tweet].retweet_count+' ❤️ '+data[tweet].favorite_count+'</span></h2></div>')
                                             //create tweet in tweet container
@@ -80,7 +79,23 @@
                 }
         });
     });
-
+    
+   $('#update_rss').click(function(e){
+       
+         $.ajax({ 
+                 data: {action: 'otter_update_rss', tweets:tweets},
+                 type: 'post',
+                 url: ajaxurl,
+                 dataType:'json',
+                 success: function(data) {
+                     console.log(data)
+                 }
+                 
+       });
+       
+   });
+   
+   
   });
 })( jQuery );
 

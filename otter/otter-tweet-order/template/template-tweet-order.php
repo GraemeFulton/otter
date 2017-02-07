@@ -36,6 +36,10 @@
         <section id="tweets"class='padding' >
             <p>You've not searched for anything</p>
         </section>
+    <!--  INPUT  -->
+                <div class="form-group">
+                    <button  id="update_rss" class="btn btn-default btn-primary col-xs-4">Save RSS Feed</button>
+                </div>
 <!-- 
 <form method="POST" action="admin-post.php">
     <label for="awesome_text">Awesome Text</label>
