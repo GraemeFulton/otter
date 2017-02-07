@@ -139,6 +139,7 @@ header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('b
                 if($count<5){
                // $og = $OG->get_og_data($tweet['entities']['urls'][0]['expanded_url'] );  
                $url = $OG->get_url($tweet['entities']['urls'][0]['expanded_url'] );  
+               $og = $OG->get_og_data($url);
                 // Open the file to get existing content
                 ob_start();
                 include $rss_body;

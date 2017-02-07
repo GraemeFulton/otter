@@ -14,8 +14,11 @@ public function get_url($link){
              //the first url will be the article link
             $headers = get_headers($link, true);
             $link =$headers['Location'];
-            $url = preg_replace('/\?.*/', '', $link);
-            $url = preg_replace('/#.*/', '', $url);            
+            
+            //swap ampersand
+            $url = str_replace('&', '&amp;', $link ); 
+            //swap https for http
+            $url = str_replace('https://', 'http://', $url ); 
             
             if(is_array($url)){
                 $link= $url[0];
@@ -27,23 +30,10 @@ public function get_url($link){
 }    
     
     
-public function get_og_data($link){
-  
-            //the first url will be the article link
-            $headers = get_headers($link, true);
-            $link =$headers['Location'];
-            $url = preg_replace('/\?.*/', '', $link);
-            $url = preg_replace('/#.*/', '', $url);            
-            
-            if(is_array($url)){
-                $link= $url[0];
-            }
-            else{
-              $link= $url;
-            }
+public function get_og_data($url){
            
             //and add the post image using plugin hook from prototypr-og-data
-           return $this->otter_get_open_graph_image($link );
+           return $this->otter_get_open_graph_image($url );
  }
  
  

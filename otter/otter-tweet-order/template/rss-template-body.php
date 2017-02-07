@@ -1,11 +1,11 @@
 <item>
-    <title><?php echo $tweet['text']?></title>
+    <title><?php echo ($og['title']) ? $og['title'] : $tweet['text']?></title>
     <link><?php echo $url; ?></link>
     <pubDate><?php echo $tweet['created_at']; ?></pubDate>
     <dc:creator><?php the_author(); ?></dc:creator>
     <guid isPermaLink="false"><?php echo $tweet['id']; ?></guid>
     <description>
-         <![CDATA[<a href="https://dribbble.com/shots/3157421-Google-Logo-Animation" width="200" height="150"><img alt="Google Logo Animation" width="800" height="600" src="https://d13yacurqjgara.cloudfront.net/users/1180195/screenshots/3157421/google_logo.gif" /></a>
+         <![CDATA[<a href="<?php echo $url ?>" width="200" height="150"><img src="<?php echo ($og['image']) ? $og['image'] : $url;?>" /></a>
         <?php echo $tweet['text'];?>
          ]]>
     </description>
