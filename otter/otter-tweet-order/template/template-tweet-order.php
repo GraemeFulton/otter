@@ -32,18 +32,18 @@
                 </div>
             
         </section>
- 
-        <section id="tweets"class='padding' >
+
+        <section id="tweets"class='padding' style="max-width: 720px;">
             <p>You've not searched for anything</p>
         </section>
     <!--  INPUT  -->
+         <section class="container content-otter-main padding twitter-form" style="max-width: 100%;">
+
+            <!--  INPUT  -->
                 <div class="form-group">
-                    <button  id="update_rss" class="btn btn-default btn-primary col-xs-4">Save RSS Feed</button>
+                   <div class="col-xs-4">                  
+                        <button  id="update_rss" class="btn btn-default btn-primary col-xs-4">Save RSS Feed</button>
+                    </div>
                 </div>
-<!-- 
-<form method="POST" action="admin-post.php">
-    <label for="awesome_text">Awesome Text</label>
-    <input id="twitter_handle" name="twitter_handle" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
-    <input name='action' type="hidden" value='custom_form_submit'>
-    <input type="submit" value="Save" class="button button-primary button-large">
-</form>-->
+            
+        </section> 
