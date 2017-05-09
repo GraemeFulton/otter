@@ -31,7 +31,7 @@
                         
                                 tweetContainer.html('');
                                 var tweetCount = 0;
-                                $('#tweets').append("<h1>@"+$('#twitter_handle').val()+"'s Top 20 Tweets from the last 7 days</h1>")
+                                $('#tweets').append("<h1>@"+$('#twitter_handle').val()+"'s Top 50 Tweets from the last 7 days</h1>")
                                 $('#tweets').append('<p> The last 7 days tweets ranked by total retweets, and favourites.</p>');
                                 $('#tweets').append('<p> From: '+moment(A_WEEK_OLD).format("DD-MM-YYYY")+" to "+TODAY+'</p>')
 
@@ -43,7 +43,7 @@
                                     
                                     //dates
                                     if(tweetdate > A_WEEK_OLD){
-                                        if(tweetCount <20){
+                                        if(tweetCount <50){
                                             var count = tweetCount+1
                                              tweets.push(data[tweet])
                                             //create tweet container moment().startOf('day').fromNow();        // 12 hours ago
